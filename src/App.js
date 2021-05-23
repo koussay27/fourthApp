@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import ReactDOM from 'react-dom';
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class Car extends React.Component {
+  render() {
+    return <h2>I am a {this.props.fullName}!</h2>;
+    <h3>I Like {this.props.bio} </h3>
+    
+  }
 }
 
-export default App;
+class fullName extends React.Component {
+  render() {
+    return (
+      <div>
+      <h1></h1>
+      <Car fullName="Koussay"  bio="anime"  profession="a student"/>
+ 
+      
+      </div>
+    );
+  }
+}
+
+
+ReactDOM.render(<fullName />, document.getElementById('root'));
+ReactDOM.render(<bio />, document.getElementById('root'));
+ReactDOM.render(<profession />, document.getElementById('root'));
+
+export default fullName;
